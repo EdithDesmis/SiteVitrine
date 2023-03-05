@@ -1,0 +1,783 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <title>Email creation de compte</title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
+    <!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+    <!-- CSS Reset -->
+    <style type="text/css">
+/* What it does: Remove spaces around the email design added by some email clients. */
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html,  body {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+/* What it does: Forces Outlook.com to display emails full width. */
+.ExternalClass {
+	width: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+	margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,  td {
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	margin: 0 auto !important;
+}
+table table table {
+	table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+.yshortcuts a {
+	border-bottom: none !important;
+}
+/* What it does: Another work-around for iOS meddling in triggered links. */
+a[x-apple-data-detectors] {
+	color: inherit !important;
+}
+		/* style news alice delice */
+		#outlook a{padding:0}span.MsoHyperlink{mso-style-priority:1;color:inherit}span.MsoHyperlinkFollowed{mso-style-priority:1;color:inherit}body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;color:#000000;margin:0 auto}
+td{line-height:100%}div[style*="margin: 16px 0"]{margin:0!important}.ExternalClass{width:100%;display:block!important}.ExternalClass,.ExternalClass *,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td{line-height:100%}
+img{outline:0;text-decoration:none;-ms-interpolation-mode:bicubic}a img{border:none}td a img {
+}
+u+* img+div{display:none}table td{border-collapse:collapse;mso-line-height-rule:exactly}table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}
+a{color:inherit;text-decoration:none;mso-line-height-rule:exactly}.appleLinks,.appleLinksWhite{text-decoration:none!important}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;
+font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}sup{font-size:.8em;vertical-align:text-top;line-height:1;height:0;mso-text-raise:24%}
+@media screen and (min-width:451px) and (max-width:640px),screen and (min-device-width:451px) and (max-device-width:640px){.t_w100p{width:100%!important}.t_w{width:undefined!important}
+.t_w90p{width:90%!important}.t_w25p{width:25%!important}.t_w0p{width:0%!important}.t_w50p{width:50%!important}.t_hauto{height:auto!important}.t_w250px{width:250px!important}.t_fsnormal{font-style:normal!important}
+.t_w33d33p{width:33.33%!important}.t_w33d34p{width:33.34%!important}.t_w85p{width:85%!important}.t_w20p{width:20%!important}.t_w35p{width:35%!important}.t_w45p{width:45%!important}.t_w70p{width:70%!important}
+.t_v{display:block!important;font-size:inherit!important;max-height:none!important;max-width:none!important;overflow:visible!important}.t_dnone{display:none!important}
+}
+@media screen and (max-width:450px),screen and (max-device-width:450px){.m_w100p{width:100%!important}.m_w{width:undefined!important}.m_w90p{width:90%!important}.m_w33d33p{width:33.33%!important}
+.m_w0p{width:0%!important}.m_w33d34p{width:33.34%!important}.m_w50p{width:50%!important}.m_hauto{height:auto!important}.m_w250px{width:250px!important}.m_fsnormal{font-style:normal!important}
+.m_pt0px{padding-top:0!important}.m_pb40px{padding-bottom:40px!important}.m_pt30px{padding-top:30px!important}.m_tacenter{text-align:center!important}.m_pt10px{padding-top:10px!important}
+.m_v{display:block!important;font-size:inherit!important;max-height:none!important;max-width:none!important;overflow:visible!important}.m_dnone{display:none!important}
+}
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style type="text/css">
+        
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #EA6046 !important;
+            border-color: #EA6046 !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 640px) {
+
+            .email-container {
+                width: 100% !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid,
+            .fluid-centered {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            /* And center justify these ones. */
+            .fluid-centered {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+        
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+                
+        }
+
+    </style>
+    </head>
+    <body bgcolor="#FFFFFF" width="100%" style="margin: 0;" yahoo="yahoo">
+    <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" style="border-collapse:collapse;">
+      <tr>
+        <td><center style="width: 100%;">
+            
+            <!-- Visually Hidden Preheader Text : BEGIN -->
+            <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;"> (Optional) This text will appear in the inbox preview, but not the email body. </div>
+            <!-- Visually Hidden Preheader Text : END --> 
+            
+            <!-- Email Header : BEGIN -->
+          <table align="center" width="640" bgcolor="#FFFFFF" class="email-container">
+			   <tr> <a href="../pageBook-email.html"><img src="../../Images/close.png" style= text-align:left ;width="27" height="27" alt="close" /></a></tr>
+           <tr>
+                <td style="padding: 20px 0; text-align: center"><a href=" https://www.alicedelice.com/?utm_source=e-mail_trigger&utm_medium=crea-compte-club-gourmand&utm_campaign=Trigger_marketing" target="_blank"><img src="images/logo-alice-delice-2.png" width="136" alt="logo Alice Delice" border="0"></a></td>
+              </tr>
+          </table>
+            <!-- Email Header : END --> 
+            
+            <!-- Email Body : BEGIN -->
+            <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor= "#FAF7F6" width="640" class="email-container">
+             
+            <!-- Hero Image, Flush : BEGIN -->
+            <tr>
+                <td class="full-width-image"><a href="https://www.alicedelice.com/?utm_source=e-mail_trigger&utm_medium=crea-compte-club-gourmand&utm_campaign=Trigger_marketing" target="_blank"><img src="images/Header.png" alt="alt_text" width="640" height="" style="width: 100%; max-width: 640px; height: auto;" border="0" align="center"></a></td>
+              </tr>
+            <!-- Hero Image, Flush : END --> 
+            
+            <!-- 1 Column Text : BEGIN -->
+			<tr>
+	
+                <td style="padding: 20px; text-align: center; font-family: sans-serif; font-size: 24px; mso-height-rule: exactly;  color: #000000;"> <strong> Bonjour &lt;prénom&gt;</strong><br>
+                
+                
+               </td>
+                  </tr>	
+            <tr>
+	
+                <td style="padding: 10px 40px 30px; border-collaps; text-align: center; font-family: sans-serif; font-size: 14px; mso-height-rule: exactly; line-height: 20px; color: #555555;"> Nous vous souhaitons la bienvenue dans la communauté des amoureux du fait-maison.  <br></td>
+                  </tr>
+				 <tr>
+                        <td align="center" valign="top" ><a href="https://www.alicedelice.com/?utm_source=e-mail_trigger&amp;utm_medium=crea-compte-club-gourmand&amp;utm_campaign=Trigger_marketing" target="_blank"><img src="images/visu-accueil.png" width="550" alt="accueil" border="0"></a></td>
+                      </tr>
+            <tr>
+				<td style="padding: 0px 50px; text-align: center; font-family: sans-serif; font-size: 14px; mso-height-rule: exactly; line-height: 20px; color: #555555;"> 
+				  <strong> Grâce à votre compte, vous pourrez passer et suivre vos commandes en deux coups de cuiller à pot. Et bien sûr, vous pourrez bénéficier d’avantages et de services. </strong>Ici, on prend soin de vous à chaque étape de votre aventure culinaire. <br>
+				  <br>
+                 Et si vous avez la moindre question concernant vos données perso, soyez rassuré : on les garde bien au chaud.
+                  <br>
+                  <br>
+                 <h4>Ensemble, cuisinons un monde meilleur.</h4> 
+                  
+Florence,
+<br>
+Au service de la communauté Alice Délice<br>
+<br>
+                
+                <!-- Button : Begin -->
+                
+                <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor= "#FAF7F6" style="margin: auto">
+                    <tr>
+                    <td style="padding: 0px 0px 20px;"><a href="https://www.alicedelice.com/?utm_source=e-mail_trigger&utm_medium=crea-compte-club-gourmand&utm_campaign=Trigger_marketing" style="background: #EB5840;  padding: 10px 10px;color: #ffffff; font-family: sans-serif; font-size: 14px; line-height: 1.1; text-align: center;text-transform:uppercase; text-decoration: none; display: block;  font-weight: bold; letter-spacing:1px;" > 
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Je m’équipe pour cuisiner maison<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--> 
+                      </a></td>
+                  </tr>
+              </table>
+                
+              <!-- Button : END --></td>
+              </tr>
+            <!-- 1 Column Text : BEGIN --> 
+            
+           
+            
+          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFFFFF" width="640" class="email-container"> 
+			  <tr>
+	
+                <td style="padding: 20px 50px 0px; text-align: center; font-family: sans-serif; font-size: 30px; mso-height-rule: exactly; line-height: 35px;"> On dirait que la mayonnaise prend 
+              <strong> entre nous !</strong> <br></td>
+                  </tr>
+			  <tr>
+                <td dir="ltr" align="center" valign="top" width="100%" style="padding: 0px 40px ;"><br>
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                    <td width="42%" class="stack-column-center"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                        <td dir="ltr" valign="top" style="padding: 0 10px;"><a href="https://www.alicedelice.com/page/le-club-gourmand?utm_source=e-mail_trigger&amp;utm_medium=crea-compte-club-gourmand&amp;utm_campaign=Trigger_marketing" target="_blank"><img src="images/carte-club-gourmand-Pt-ombre.png" width="210" alt="photo" border="0" class="center-on-narrow"></a></td>
+                      </tr>
+                      </table></td>
+                    <td width="40%" class="stack-column-center" style="padding: 20px,20px,10px;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                        <td dir="ltr" valign="top" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; font-size: 18px; mso-height-rule: exactly; line-height: 22px; color: #555555; padding: 20px,20px,10px; text-align: left;" class="center-on-narrow"><p><strong>Bienvenue au club gourmand ! </strong><br>
+                          </p>
+                          </td>
+                      </tr>
+						<tr>
+                        <td dir="ltr" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; font-size: 14px; mso-height-rule: exactly; line-height: 17px; color: #555555; padding: 20px,20px,10px; text-align: left;" class="center-on-narrow">
+							<p>Nous sommes heureux de vous compter parmi notre communauté de militants du fait-maison.<br>
+                          </p>
+                            
+                          </td>
+                      </tr>
+							<tr>
+							 <td dir="ltr" valign="top" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace'; font-size: 14px; mso-height-rule: exactly; line-height: 17px; color: #555555; padding: 20px,20px,10px; text-align: left;" class="center-on-narrow"><p>Rappel de vos avantages :</p><br>
+								</td>
+					</tr>
+                      </table></td>
+                  </tr>
+					
+					<!-- Point -->
+					
+						<td class="stack-column-center"><table align="center" border= "0" cellpadding="0" cellspacing="0">
+                        <tr>
+                        <td dir="ltr" valign="top"><a href="https://www.alicedelice.com/page/le-club-gourmand?utm_source=e-mail_trigger&amp;utm_medium=crea-compte-club-gourmand&amp;utm_campaign=Trigger_marketing" target="_blank"><img src="images/Point-carte1.png" width="274" alt="Point carte" border="0" class="center-on-narrow"></a></td>
+						</tr>
+						</table></td>
+                    <td width="50%" class="stack-column-center">
+						<table align="center" border="0" cellpadding="O" cellspacing="0" width="100%">
+                        <tr>
+                        	<td dir="ltr" valign="top"><a href="https://www.alicedelice.com/page/le-club-gourmand?utm_source=e-mail_trigger&amp;utm_medium=crea-compte-non-club-gourmand&amp;utm_campaign=Trigger_marketing" target="_blank"><img src="images/point-carte2.png" width="274" alt="point bon d'achat" border="0" class="center-on-narrow"></a></td>
+                      </tr>
+                      </table>
+						</td>
+					
+					
+			
+
+						<!-- Button 2: Begin -->
+						<table><tr cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                    <td style="padding-top:20px;padding-bottom:10px; color:#ffffff;;text-align:center;text-transform:uppercase;line-height:40px;font-weight:700;mso-hide:all;display:inline-block;-webkit-text-size-adjust:none;text-decoration:none;"><a href="https://www.alicedelice.com/page/le-club-gourmand?utm_source=e-mail_trigger&utm_medium=crea-compte-club-gourmand&utm_campaign=Trigger_marketing" target="_blank" style="background: #EB5840;  padding: 10px 20px;color: #ffffff; font-family: sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block;  font-weight: bold; letter-spacing:1px;"> 
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      Je découvre tous mes avantages
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a></td>
+                  </tr>
+						</table>
+					
+                  </table></td>
+              </tr>
+			 
+		
+			
+            
+            <!-- Thumbnail Left, Text Right : BEGIN -->
+					 <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFFFFF" width="640" class="email-container">
+						 
+						 <tr>
+	
+                <td style="padding: 20px 40px 0px; text-align: center; font-family: sans-serif; font-size: 30px; mso-height-rule: exactly; line-height: 35px;"> <strong> Cuisiner un monde meilleur</strong> <br>
+avec Alice Délice<br>
+                <br>
+                
+               </td>
+                  </tr>	
+            <tr>
+                <td dir="ltr" align="center" valign="top" width="100%" style="padding: 0px 40px ;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                    <td width="42%" class="stack-column-center"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                        <td dir="ltr" valign="top" style="padding: 0 10px;"><a href="https://www.alicedelice.com/page-cms/qui-est-alice-delice?utm_source=e-mail_trigger&utm_medium=crea-compte-non-club-gourmand&utm_campaign=Trigger_marketing" target="_blank"><img src="images/image-gauche.png" width="274" alt="militer" border="0" class="center-on-narrow"></a></td>
+                      </tr>
+                      </table></td>
+                    <td width="40%" class="stack-column-center" style="padding: 20px,20px,10px;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                        <td dir="ltr" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; font-size: 12px; mso-height-rule: exactly; line-height: 16px; color: #555555; padding: 20px,20px,10px; text-align: left;" class="center-on-narrow"><p>C’est être conscient que notre manière de nous nourrir a un impact sur notre santé et sur la planète. Il est donc indispensable d’agir en conséquence et <strong>militer pour le fait maison.</strong> </p>
+                          <p><br>
+                            <strong> C’est pourquoi Alice Délice milite pour : </strong><br>
+                           • mieux maîtriser ce que l’on met dans notre assiette : le sucre, le sel, les conservateurs… <br>
+                           • consommer local autant que possible, gâcher moins en cuisinant uniquement ce dont on a besoin, <br>
+                           • respecter le rythme des saisons, <br>
+                           • générer moins de déchets industriels.<br>
+                          </p>
+                            
+                          </td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                  </table></td>
+              </tr>
+            <!-- Thumbnail Left, Text Right : END --> 
+            
+            <!-- Thumbnail Right, Text Left : BEGIN -->
+            <tr>
+                <td dir="rtl" align="center" valign="top" width="100%" style="padding: 10px 20px 10px 40px;">
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                    <td width="40%" class="stack-column-center"><table align="center" border="0" cellpadding="O" cellspacing="0" width="100%">
+                        <tr>
+                        <td dir="ltr" valign="top" style="padding: 0,40px;"><a href="https://www.alicedelice.com/page-cms/qui-est-alice-delice?utm_source=e-mail_trigger&utm_medium=crea-compte-non-club-gourmand&utm_campaign=Trigger_marketing" target="_blank"><img src="images/image-droite.png" width="279" alt="marque engagée" border="0" class="center-on-narrow"></a></td>
+                      </tr>
+                      </table></td>
+                    <td width="40%" class="stack-column-center" style="padding: 20px,20px,10px;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                        <td dir="ltr" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; font-size: 12px; mso-height-rule: exactly; line-height: 16px; color: #555555; padding: 20px,20px,10px; text-align: left;" class="center-on-narrow">
+                           <p> 
+                             Pour minimiser son impact écologique, Alice Délice transforme ses intentions en actions, chaque jour, aux côtés de ses clients mais aussi auprès de ses partenaires fabricants.</p>
+                           <p><strong>&nbsp;Le plus souvent possible, nos produits sont :</strong>&nbsp;<br>
+                             • manufacturés à moins de 2000 km de chez vous <br>
+                             • garantis et utiles longtemps, grâce à nos nombreux conseils d’entretien ou nos pièces de rechange&nbsp;<br>
+• dotés de packaging éco-conçus <br>
+• labellisés : bio, bois PEFC ou FSC, Zéro résidus.&nbsp;<br>
+                             <br>
+                           </p></td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                  </table></td>
+              </tr>
+						   <!-- bouton -->
+           
+				
+                    <tr cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                    <td style="background-color:#E4D9D5;color:#ffffff; text-align:center;text-transform:uppercase;line-height:40px;font-weight:700;mso-hide:all;display:inline-block;-webkit-text-size-adjust:none;text-decoration:none;" class="button-td"><a href="https://www.alicedelice.com/page-cms/qui-est-alice-delice?utm_source=e-mail_trigger&utm_medium=crea-compte-non-club-gourmand&utm_campaign=Trigger_marketing" target="_blank" style="background: #EB5840;  padding: 10px 20px;color: #ffffff; font-family: sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block;  font-weight: bold; letter-spacing:1px;" class="button-a"> 
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                      En savoir + sur Alice Délice
+                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                    </a></td>
+                  </tr>
+         
+        <tr>
+	
+                <td style="padding: 25px 40px 20px; text-align: center; font-family: sans-serif; font-size: 10px; mso-height-rule: exactly; line-height: 12px; color: #555555;">Les informations que vous avez entrées dans votre compte sont strictement confidentielles et protégées par un accès sécurisé. Conformément à la législation, vous avez à tout moment la possibilité de consulter et de modifier ces informations dans votre espace.
+		    </td>
+						 </tr>
+            <!-- Thumbnail Right, Text Left : END -->
+						
+				<!-- footer --> 
+			
+					 <tr>
+	 <td style="padding: 20px 0px ; text-align: center; font-family: Helvetica,Arial,sans-serif; font-size: 30px; mso-height-rule: exactly;"> Restons complices  <br><strong>à chaque instant…</strong>
+                <br>
+                
+               </td>
+                  </tr>
+						 <tr>
+<td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;font-size:13px;padding-top:0px;padding-bottom:30px;vertical-align:middle;line-height:15px"> 
+Partageons le goût et les bienfaits du fait-maison ici, là ou là… </td>
+</tr>
+						<!-- reseaux sociaux --> 
+						 <table style="margin:auto;background-color:#fff;width:640px" class="t_w100p m_w100p" width="640" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+
+<table style="margin:auto;width:640px" class="t_w100p m_w100p" role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+</tbody></table>
+<table style="margin:auto;width:352px" class="t_w100p m_w100p" width="352" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+<table style="width:117px" class="t_w33d33p m_w33d33p" role="presentation" width="117" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:64px" role="presentation" width="64" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="text-align:center">
+<a href="https://www.instagram.com/alicedelice_france/" width="64" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Instagram">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/10.png" alt="Instagram" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="64">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:117px" class="t_w100p m_w100p" role="presentation" width="117" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Arial,Helvetica,sans-serif;color:#DB6650;text-align:center;font-size:13px;padding-top:10px;padding-bottom:40px;vertical-align:middle;line-height:15px">
+<a href="https://www.instagram.com/alicedelice_france" style="color:#DB6650;line-height:15px;display:block;text-decoration:none;outline:0" title="Instagram">
+<span style="text-decoration:underline">Instagram</span>
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]> </td><td style="vertical-align:top;border-collapse:collapse"><![endif]-->
+<table style="width:117px" class="t_w33d33p m_w33d33p" role="presentation" width="117" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:64px" role="presentation" width="64" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="text-align:center">
+<a href="https://www.facebook.com/AliceDelice/" width="64" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Facebook">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/11.png" alt="Facebook" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="64">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:117px" class="t_w100p m_w100p" role="presentation" width="117" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Arial,Helvetica,sans-serif;color:#DB6650;text-align:center;font-size:13px;padding-top:10px;padding-bottom:40px;vertical-align:middle;line-height:15px">
+<a href="https://www.facebook.com/AliceDelice" style="color:#DB6650;line-height:15px;display:block;text-decoration:none;outline:0" title="Facebook">
+<span style="text-decoration:underline">Facebook</span>
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]> </td><td style="vertical-align:top;border-collapse:collapse"><![endif]-->
+<table style="width:118px" class="t_w33d34p m_w33d34p" role="presentation" width="118" cellspacing="0" cellpadding="0" border="0" align="right">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:64px" role="presentation" width="64" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="text-align:center">
+<a href="https://www.pinterest.fr/adlice0045" width="64" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Pinterest">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/12.png" alt="Pinterest" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="64">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:118px" class="t_w100p m_w100p" role="presentation" width="118" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Arial,Helvetica,sans-serif;color:#DB6650;text-align:center;font-size:13px;padding-top:10px;padding-bottom:40px;vertical-align:middle;line-height:15px">
+<a href="https://www.pinterest.fr/adlice0045" style="color:#DB6650;line-height:15px;display:block;text-decoration:none;outline:0" title="Pinterest">
+<span style="text-decoration:underline">Pinterest</span>
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+						 	<!-- services --> 
+						 <table style="margin:auto;background-color:#FAF7F6;width:640px" class="t_w100p m_w100p" width="640" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:576px" class="t_w90p m_w100p" width="576" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+<table style="width:288px" class="t_w50p m_w100p" role="presentation" width="288" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:288px" class="t_w100p m_w100p" width="288" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+<table style="width:144px" class="t_w50p m_w50p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:79px" role="presentation" width="79" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="padding-top:40px;text-align:center">
+<a href="https://www.alicedelice.com/page-cms/livraison" width="79" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Livraison">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/13.png" alt="Livraison offerte" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="79">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;color:#D96650;text-align:center;font-size:18px;padding-top:10px;padding-bottom:5px;vertical-align:middle;line-height:22px">
+<a href="https://www.alicedelice.com/page-cms/livraison" style="color:#D96650;line-height:22px;display:block;text-decoration:none;outline:0" title="Livraison"> 
+Livraison offerte </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:center;font-size:14px;padding-bottom:25px;vertical-align:middle;line-height:17px">
+<a href="https://www.alicedelice.com/page-cms/livraison" style="color:#000000;line-height:17px;display:block;text-decoration:none;outline:0" title="Livraison"> 
+dès 49,90€ d’achat en Colissimo </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]> </td><td style="vertical-align:top;border-collapse:collapse"><![endif]-->
+<table style="width:144px" class="t_w50p m_w50p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="right">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:79px" role="presentation" width="79" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="padding-top:40px;text-align:center">
+<a href="https://www.alicedelice.com/page-cms/securite-et-confidentialite" width="79" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Paiement sécurisé">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/14.png" alt="Paiement" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="79">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;color:#D96650;text-align:center;font-size:18px;padding-top:10px;padding-bottom:5px;vertical-align:middle;line-height:22px">
+<a href="https://www.alicedelice.com/page-cms/securite-et-confidentialite" style="color:#D96650;line-height:22px;display:block;text-decoration:none;outline:0" title="Paiement s&amp;eacute;curis&amp;eacute;"> 
+Paiement<br>Paypal/CB </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:center;font-size:14px;padding-bottom:10px;vertical-align:middle;line-height:17px">
+<a href="https://www.alicedelice.com/page-cms/securite-et-confidentialite" style="color:#000000;line-height:17px;display:block;text-decoration:none;outline:0" title="Paiement s&amp;eacute;curis&amp;eacute;"> 
+sécurisé </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]> </td><td style="vertical-align:top;border-collapse:collapse"><![endif]-->
+<table style="width:288px" class="t_w50p m_w100p" role="presentation" width="288" cellspacing="0" cellpadding="0" border="0" align="right">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:288px" class="t_w100p m_w100p" width="288" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+<table style="width:144px" class="t_w50p m_w50p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:80px" role="presentation" width="80" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="padding-top:40px;text-align:center" class="m_pt0px">
+<a href="https://www.alicedelice.com/page-cms/retour-offert" width="80" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Satisfait ou remboursé">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/15.png" alt="Satisfait ou remboursé" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="80">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;color:#D96650;text-align:center;font-size:18px;padding-top:10px;padding-bottom:5px;vertical-align:middle;line-height:22px">
+<a href="https://www.alicedelice.com/page-cms/retour-offert" style="color:#D96650;line-height:22px;display:block;text-decoration:none;outline:0" title="Satisfait ou rembours&amp;eacute;"> 
+Satisfait<br>ou remboursé </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;font-size:14px;padding-bottom:10px;vertical-align:middle;line-height:17px" class="m_pb40px">
+<a href="https://www.alicedelice.com/page-cms/retour-offert" style="color:#000000;line-height:17px;display:block;text-decoration:none;outline:0" title="Satisfait ou rembours&amp;eacute;"> 
+retour offert </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]> </td><td style="vertical-align:top;border-collapse:collapse"><![endif]-->
+<table style="width:144px" class="t_w50p m_w50p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="right">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:79px" role="presentation" width="79" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="padding-top:40px;text-align:center" class="m_pt0px">
+<a href="https://www.alicedelice.com/contact" width="79" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Contact">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/16.png" alt="Service client" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="79">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;color:#D96650;text-align:center;font-size:18px;padding-top:10px;padding-bottom:5px;vertical-align:middle;line-height:22px">
+<a href="https://www.alicedelice.com/contact" style="color:#D96650;line-height:22px;display:block;text-decoration:none;outline:0" title="Contact"> 
+Service<br>client </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="margin:auto;width:144px" class="t_w100p m_w100p" role="presentation" width="144" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;font-size:14px;padding-bottom:10px;vertical-align:middle;line-height:17px" class="m_pb40px">
+<a href="https://www.alicedelice.com/contact" style="color:#000000;line-height:17px;display:block;text-decoration:none;outline:0" title="https://www.alicedelice.com/contact"> 
+contactez-nous </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+						<!-- footer -->
+						 <table style="margin:auto;background-color:#E0D6D2;width:640px" class="t_w100p m_w100p" width="640" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:512px" class="t_w85p m_w90p" width="512" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td>
+<table style="width:76px" class="t_w20p m_w100p" role="presentation" width="76" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td>
+<table style="margin:auto;width:72px" role="presentation" width="72" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="padding-top:50px;text-align:center" class="m_pt30px">
+<a href="https://www.alicedelice.com/" width="72" style="color:#000000;outline:0;border:none;margin:auto;display:block" class="t_w100p m_w100p" title="Alice Délice">
+<img src="https://u.ems7.net/img/3396/Header_Footer_20052020/17.png" alt="Logo" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" class="t_w100p m_w100p" width="72">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]> </td><td style="vertical-align:top;border-collapse:collapse"><![endif]-->
+<table style="width:180px" class="t_w35p m_w100p" role="presentation" width="180" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td>
+<table style="float:left;width:180px" class="t_w100p m_w100p" role="presentation" width="180" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:left;font-size:13px;padding-top:50px;padding-bottom:10px;padding-left:20px;vertical-align:middle;line-height:15px" class="m_tacenter m_pt10px"> 
+Rendez-vous sur <span style="text-decoration:underline">alicedelice.com</span>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]> </td><td style="vertical-align:top;border-collapse:collapse"><![endif]-->
+<table style="width:256px" class="t_w45p m_w100p" role="presentation" width="256" cellspacing="0" cellpadding="0" border="0" align="right">
+<tbody><tr>
+<td>
+<table style="float:left;width:128px" class="t_w70p m_w100p" role="presentation" width="128" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:left;font-size:13px;padding-top:50px;padding-bottom:10px;vertical-align:middle;line-height:15px" class="m_tacenter m_pt10px">
+<a href="https://www.alicedelice.com/page/le-club-gourmand" style="color:#000000;line-height:15px;display:block;text-decoration:none;outline:0" title="Club gourmand"> 
+Devenir membre du Club gourmand </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td>
+<table style="float:left;width:128px" class="t_w70p m_w100p" role="presentation" width="128" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr>
+<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:left;font-size:13px;padding-top:10px;padding-bottom:10px;vertical-align:middle;line-height:15px" class="m_tacenter">
+<a href="https://www.alicedelice.com/trouver-ma-boutique" style="color:#000000;line-height:15px;display:block;text-decoration:none;outline:0" title="Trouver ma boutique"> 
+Trouver ma boutique la plus proche </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table style="margin:auto;width:512px" class="t_w85p m_w90p" role="presentation" width="512" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody><tr>
+<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:left;font-size:13px;padding-top:30px;padding-bottom:40px;vertical-align:middle;line-height:15px"> 
+Merci d’ajouter contact@e.alice-delice.com à votre carnet d’adresse afin de vous assurer que nos e-mails arrivent dans votre boîte de réception (et non dans celle du courrier indésirable).<br><br>Merci de ne pas répondre à ce message.<br>Si vous souhaitez nous contacter, cliquez ici : <span style="text-decoration:underline"><a href="https://www.alicedelice.com/contact" target="_blank">contact</a></span></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+	<tr>
+		<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:center;font-size:11px;vertical-align:middle;padding-bottom:40px">Si vous ne voulez plus recevoir d'e-mails de la part d'Alice Délice, cliquez sur le lien de <a style="color: #917a6a; text-decoration: underline;" href="$unsubUrl$" target="_blank">désinscription</a></td></tr>
+		
+	<tr>
+<td style="font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:center;font-size:11px;vertical-align:middle;padding-bottom:40px">Si vous ne visualisez pas correctement la newsletter, consultez celle-ci en <a style="color: #917a6a; text-decoration: underline;" href="$mirrorUrl" target="_blank">cliquant ici</a></td>
+	</tr>
+</tbody></table>
+						 
+				</table>
+				</table>
+
+				
+            <!-- Email Body : END --> 
+            
+            <!-- Email Footer : BEGIN -->
+            
+            <!-- Email Footer : END -->
+            
+			
+			</center>
+		</td>
+		</tr>
+		
+		</table>
+	</body>
+</html>

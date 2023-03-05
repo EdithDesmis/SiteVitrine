@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>moustache</title>
+<script src="scripts/jquery.js" type="text/javascript"></script>
+<style>
+*
+{
+	margin:0;
+	padding:0;
+}
+@font-face{
+	font-family:'brandoll';
+	src:url(fonts/branboll.TTF);
+}
+@font-face{
+	font-family:'futura';
+	src:url(fonts/futura.TTF);
+}
+html{
+	width:100%;
+	height:100%;
+}
+body{
+	width:100%;
+	height:100%;
+}
+/*********home***************/
+#partie1{
+	width:100%;
+	height:100%;
+	background-color:#e8e3d9;
+}
+#partie1 nav{
+	position:fixed;
+	top:43%;
+	left:50px;
+	z-index:1;
+}
+#partie1 nav a{
+	text-decoration:none;
+	color:#000;
+}
+#partie1 nav ul{
+	list-style:none;
+}
+#partie1 nav li{
+	font-family:'futura';
+	font-size:14px;
+	line-height: 40px;
+	width:130px;
+	border-bottom:#000 solid 1px;
+
+}
+#partie1 h2{
+	font-family:'brandoll';
+	font-size:54px;
+	animation: textla 2s linear 2s;
+	animation-fill-mode: forwards;
+	position:absolute;
+	left:-100%;
+}
+@keyframes textla{
+	0%{left:-100%; top:35%;}
+	100%{ left:50%; top:35%;}
+}
+
+
+#partie1 h1{
+	font-family:'brandoll';
+	font-size:70px;
+	animation: textmous 2s linear 2s;
+	animation-fill-mode: forwards;
+	position:absolute;
+	left:-100%;
+}
+@keyframes textmous{
+	0%{left:-100%; top:42%;}
+	100%{ left:40%; top:42%;}
+}
+#lunettes{
+	position:absolute;
+	animation: lune 2s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes lune{
+	0%{left:100%; top:20%;}
+	100%{ left:60%; top:20%;}
+}
+#moustache{
+	position:absolute;
+	left:100%;
+	animation: mous 2s linear 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes mous{
+	0%{left:100%; top:30%;}
+	100%{ left:62%; top:30%;}
+}
+
+/************galerie************/
+#partie2{
+	width:100%;
+	height:100%;
+	background:url(image/moustacheFond.jpg);
+	padding: 50px;
+}
+#partie2 ul{
+	width:168px;
+	height:150px;
+	margin:0 auto;
+	list-style:none;
+	*border:#fff solid 2px;	
+	background-color:#000;
+	
+}
+
+
+#partie2 li{
+	font-family:'futura';
+	font-size:16px;
+	font-weight:600;
+	width:168;
+	height:150;
+	list-style:none;
+	padding: 10px;
+	color:#fff;
+	
+}
+#partie2 .bloc{
+	position:relative;
+	display:inline-block;
+	width:168px;
+	height:150px;
+	margin:5px;
+	
+}
+#partie2 img{
+	width:168px;
+	height:150px;
+	position:absolute;
+	top:0;
+	left:0;
+	transition: 1s linear;
+	}
+#partie2 .cont{
+	width:750px;
+	height:490px;
+   *display:inline-block;
+	margin:0 auto;
+	*background-color:#C03;
+
+}
+.cont div:hover .haut{
+	transform:translate(0,-150px);
+}
+.cont div:hover .droite{
+	transform:translate(168px,0px);
+}
+.cont div:hover .gauche{
+	transform:translate(-168px,0px);
+}
+.cont div:hover .bas{
+	transform:translate(0px,150px);
+}
+
+
+
+/************footer************/
+#partie3{
+	width:100%;
+	height:450px;
+	background-color:#e8e3d9;
+	padding-top: 100px;
+}
+#partie3 p{
+	font-family:'futura';
+	font-size:16px;
+	padding-top:30px;
+}
+#partie3 div{
+	width:200px;
+	height:160px;
+	border-left: #000 solid 1px;
+	margin-left:200px;
+	padding-left:50px;
+}
+#partie3 img{
+	width:160px;
+	float:left;
+	*padding-right: 40px;
+	transition: 2s linear;
+	transform-origin: 50%;
+	
+}
+#partie3 main{
+	margin: 0 auto;
+	width:500px;
+	height:200px;
+}
+main img:hover {
+	transform:rotateY(360deg);
+}
+	
+
+
+</style>
+
+</head>
+
+<body>
+<!--home-------------->
+<div id="partie1">
+	<nav>
+    	<ul>
+        <li> <a href="#partie1">HOME</a></li>
+        <li> <a href="#partie2">GALERIE</a></li>
+        <li> <a href="#partie3">CONTACT</a></li>
+       
+        
+        </ul>
+    </nav>
+    <img id="lunettes" src="image/lunetteHome.svg"/>
+    <img id="moustache" src="image/moustacheHome.svg"/>
+    <h2>La</h2>
+    <h1>Moustache</h1>
+
+</div>
+<!--galerie-------------->
+<div id="partie2">
+	<div class="cont">
+   
+        <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="droite" src="image/moustache1.jpg"/>
+        </div>
+   
+        <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="haut" src="image/moustache2.jpg"/>
+        </div>
+   
+        <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="bas" src="image/moustache3.jpg"/>
+        </div>
+   
+        <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="gauche" src="image/moustache4.jpg"/>
+        </div>
+   <!--ligne2---->     
+        
+        <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="droite" src="image/moustache5.jpg"/>
+        </div>
+         <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="haut" src="image/moustache6.jpg"/>
+        </div>
+         <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="bas" src="image/moustache7.jpg"/>
+        </div>
+         <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="gauche" src="image/moustache8.jpg"/>
+        </div>
+         <!--ligne3---->     
+        
+        <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="droite" src="image/moustache9.jpg"/>
+        </div>
+         <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="haut" src="image/moustache10.jpg"/>
+        </div>
+         <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="gauche" src="image/moustache11.jpg"/>
+        </div>
+         <div class="bloc">
+            <ul>
+                <li>LEGENDE</li>
+                <li>bolobolo<br/>
+                bolobolo
+                </li>
+            </ul>
+            <img class="bas" src="image/moustache12.jpg"/>
+        </div>
+   
+</div>
+</div>
+
+
+<!--footer-------->
+<div id="partie3">
+<main>
+    <img src="image/moustacheContact.jpg"/>
+    <div>
+    <p>Mail: moustache@gmail.fr<br/>
+    tel: 06 06 06 06<br/>
+    adresse: 54 rue de bolole Lille<br/>
+    </p>
+    </div>
+</main>
+</div>
+<!-- NAV SCROLL VERS ANCRES --->
+
+	<script type="text/javascript" src="scripts/localscroll/jquery.localscroll.js"></script>
+
+	<script type="text/javascript" src="scripts/localscroll/jquery.scrollTo.js"></script>
+
+    
+
+	<script type="text/javascript">
+
+    $(document).ready(function() {
+
+
+
+	$.localScroll();	
+
+	
+
+});
+
+</script>
+
+<!-- FIN NAV SCROLL VERS ANCRES --->
+
+
+</body>
+</html>

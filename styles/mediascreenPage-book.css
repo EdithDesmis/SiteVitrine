@@ -1,0 +1,55 @@
+@charset "utf-8";
+@media screen and (max-width: 700px){
+	/*-----------------home-----------------*/
+
+#home header{
+	position:static;
+	background-color:transparent;
+	
+}
+/*-------------header-------------------*/
+#logoMenu img {
+	width:50px;
+	height:50px;
+	top:5px;
+	left:10px;
+}
+#home header nav h1 {
+	font-size:30px;
+	
+}
+
+#home header nav{
+	width:30%;
+	height: 40px;
+}
+#home header{
+	height: 40px;
+	background-color:#3c3c3e;
+	text-align:center;
+	position:fixed;
+	z-index:2000;
+	top:0;
+	left:0;
+	
+}
+header h1{
+	font-size:30px;
+	line-height:40px;
+	margin-left:30px;
+	
+
+}
+.edith{
+	font-size:22px;
+	}
+#menu{
+	display:none;
+}
+
+#logocont, #box1, #anim1{
+	width:95%;
+	position:absolute;
+	top:100px;
+	left:5%
+}

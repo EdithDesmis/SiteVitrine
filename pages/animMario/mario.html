@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mario</title>
+<script src="script/prefixfree.min.js"></script>
+</head>
+<style>
+*{ margin:0;
+   padding:0
+}
+html{
+	width:100%;
+	height:100%;
+	background: url(images/images/fond-decor_01.png) repeat-x left bottom,
+	#9cf;
+	animation: fond  60s linear infinite;
+}
+body{
+	width:100%;
+	height:100%;
+	background: url(images/images/Bloc-Long_03.png) repeat-x left bottom;
+	animation: mur 50s linear infinite;
+}
+@keyframes fond{
+	from{background-position: 900px bottom, -900px bottom;}
+	to{background-position: -900px bottom, 900px bottom;}
+}
+@keyframes mur{
+	from{background-position:-598px bottom;}
+	to{background-position:598px bottom;}
+}
+#court{
+	overflow:hidden;
+	position:absolute;
+	bottom:162px;
+	left:0;
+	width:80px;
+	height:100px;
+	*border:#333 1px solid;
+	animation: courir 7s linear;
+	animation-fill-mode: forwards;
+}
+#court img{
+	position:absolute;
+	top:0;
+	left:0;
+	-moz-animation: marche 1s steps(3) infinite;
+
+}
+@-moz-keyframes marche{
+	from{left:0px;}
+	to{left:-240px;}
+}
+@-moz-keyframes courir{
+	0%{left:0px; opacity:1}
+	99%{opacity:1}
+	100%{left:250px; opacity:0}
+}
+#saut1{
+	overflow:hidden;
+	position:absolute;
+	bottom:162px;
+	left:270px;
+	width:80px;
+	height:100px;
+	*border:#333 1px solid;
+	animation: sauter 3s ease-out 7s;
+	opacity:0;
+}
+@keyframes sauter{
+	0%{left:270px; bottom:162px; opacity:1;}
+	8%{left:285px; bottom: 210px; opacity:1;}
+	15%{left:290px; bottom: 190px; opacity:1;}
+	55%{left:400px; bottom: 290px; opacity:1;}
+	65%{left:560px; bottom: 450px; opacity:1;}
+	99%{left:800px; bottom: 162px; opacity:1;}
+	100%{left:805px; bottom: 162px; opacity:0;}
+}
+#fleur{
+	position:absolute;
+	bottom: 450px;
+	left:560px;
+	animation: fleur 2s ease-out 9s;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+@keyframes fleur{
+	0%{left:570px; bottom: 500px; opacity:1;}
+	50%{left:590px; bottom: 530px; opacity:1;}
+	90%{left:610px; bottom: 500px; opacity:1;}
+	
+	100%{left:610px; bottom: 500px; opacity:0;}
+}
+#bas{
+	overflow:hidden;
+	position:absolute;
+	bottom:162px;
+	left:805px;
+	width:80px;
+	height:100px;
+	*border:#333 1px solid;
+	animation: atterrir 1s linear 10s;
+	opacity:0;
+}
+@keyframes atterrir{
+	0%{left:805px; bottom:162px; opacity:1;}
+	100%{left:805px; bottom:162px; opacity:1;}
+}
+#bas img{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#monstre{
+	overflow:hidden;
+	position:absolute;
+	bottom: 450px;
+	left:600px;
+	width:38px;
+	height:34px;
+	*border:#333 1px solid;
+	animation: monstre 5s linear 11s;
+	opacity:0;
+}
+#monstre img{
+	position:absolute;
+	top:0;
+	left:0;
+	animation: coucou 1s steps(2) infinite;
+}
+@keyframes coucou{
+	from{left:0px;}
+	to{left:-73px;}
+}
+@keyframes monstre{
+	0%{left:700px; bottom: 500px; opacity:1;}
+	50%{left:710px; bottom: 530px; opacity:1;}
+	90%{left:720px; bottom: 500px; opacity:1;}
+	
+	100%{left:720px; bottom: 500px; opacity:0;}
+}
+#monstrefleur{
+	overflow:hidden;
+	position:absolute;
+	bottom: 162px;
+	left:900px;
+	width:40px;
+	height:38px;
+	*border:#333 1px solid;
+	animation: mange 6s linear 10s;
+	opacity:0;
+	z-index:1;
+}
+#monstrefleur img{
+	position:absolute;
+	top:0;
+	left:0;
+	animation: manger 3s steps(3) infinite;
+}
+@keyframes manger{
+	from{left:-130px;}
+	to{left:0px;}
+}
+@keyframes mange{
+	0%{left:900px; bottom: 162px; opacity:1;}
+	99%{left:820px; bottom: 162px; opacity:1;}
+	
+	100%{left:820px; bottom: 162px; opacity:0;}
+}
+#court2{
+	overflow:hidden;
+	position:absolute;
+	bottom:162px;
+	left:805px;
+	width:80px;
+	height:100px;
+	*border:#333 1px solid;
+	animation: courir2 3s linear 11s;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+#court2 img{
+	position:absolute;
+	top:0;
+	left:0;
+	animation: marche2 1s steps(3) infinite;
+}
+@keyframes marche2{
+	from{left:0px;}
+	to{left:-240px;}
+}
+@keyframes courir2{
+	0%{left:805px; bottom:162px; opacity:1;}
+	30%{left:805px; bottom:162px; opacity:1;}
+	50%{left:805px; bottom:162px; opacity:0;}
+	70%{left:805px; bottom:162px; opacity:1;}
+	80%{left:805px; bottom:162px; opacity:0;}
+	90%{left:805px; bottom:162px; opacity:1;}
+	100%{left:805px;bottom:162px; opacity:0;}
+}
+/*
+*#court2{
+	overflow:hidden;
+	position:absolute;
+	bottom:162px;
+	left:805px;
+	width:80px;
+	height:100px;
+	*border:#333 1px solid;
+	animation: courir2 7s linear 12s infinite;
+	*animation-fill-mode: forwards;
+	opacity:0;
+}
+*#court2 img{
+	position:absolute;
+	top:0;
+	left:0;
+	animation: marche2 1s steps(3) infinite;
+}
+*@keyframes marche2{
+	from{left:0px;}
+	to{left:-240px;}
+}
+*@keyframes courir2{
+	0%{left:805px; bottom:162px; opacity:1;}
+	100%{left:805px;bottom:162px; opacity:1;}
+}*/
+
+
+</style>
+<body>
+<div id="court"><img  src="mario/marche.png"/></div>
+<div id="saut1"><img  src="mario/saut.png"/></div>
+<div id="fleur"><img src="images/images/fleur_03.png"/></div>
+<div id="bas"><img  src="mario/5.png"/></div>
+<div id="monstre"><img src="images/images/monstre_02.png"/></div>
+<div id="monstrefleur"><img src="images/images/monstrefleur_03.png"/></div>
+<div id="court2"><img  src="mario/marche.png"/></div>
+</body>
+</html>

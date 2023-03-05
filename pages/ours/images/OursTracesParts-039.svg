@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ventre" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="245px" height="220px" viewBox="0 0 245 220" enable-background="new 0 0 245 220" xml:space="preserve">
+<g>
+	
+		<radialGradient id="SVGID_1_" cx="139.207" cy="1194.6475" r="116.5161" gradientTransform="matrix(1 0 0 1 -16.7197 -1085.1562)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#B1804A"/>
+		<stop  offset="1" style="stop-color:#7E4F25"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M244.975,148.852c0,50.847-54.832,71.14-122.486,71.14C54.832,219.99,0,199.697,0,148.852
+		C0,66.984,54.838,0,122.488,0C190.137,0,244.975,66.984,244.975,148.852z"/>
+	
+		<radialGradient id="SVGID_2_" cx="139.4121" cy="1225.9893" r="70.9364" gradientTransform="matrix(1 0 0 1 -16.7197 -1085.1562)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#CA9E67"/>
+		<stop  offset="1" style="stop-color:#B1804A"/>
+	</radialGradient>
+	<path fill="url(#SVGID_2_)" d="M203.777,156.545c0,40.867-36.396,43.578-81.29,43.578c-44.894,0-81.291-2.711-81.291-43.578
+		s36.396-73.996,81.291-73.996S203.777,115.678,203.777,156.545z"/>
+</g>
+</svg>

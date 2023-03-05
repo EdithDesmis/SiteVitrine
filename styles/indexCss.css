@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.eot');
+    src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff'),
+         url('../fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.eot');
+    src: url('../fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/roboto-light-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/roboto-thin-webfont.eot');
+    src: url('../fonts/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-thin-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-thin-webfont.woff') format('woff'),
+         url('../fonts/roboto-thin-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html{
+	width:100%;
+	height:100%;
+	background:#aaa9a9;
+	background-size:cover;
+
+}
+body{
+	width:100%;
+	height:100%;
+
+}
+
+/*------nav--------*/
+
+header nav ul{
+	width:100%;
+	font-family: 'robotolight';
+	color:#fff;
+	margin:0 auto;
+	list-style:none;
+	font-size:18px;
+	
+}
+header nav li{
+	background-color:#3c3c3e;
+	width: 28%;
+	display:inline-block;
+	line-height:45px;
+	text-align:center;
+	padding:5px;
+	
+}
+header nav{
+	background-color:#3c3c3e;
+	width:400px;
+	height: 60px;
+	float:right;
+}
+header{
+	background-color:#3c3c3e;
+	width:100%;
+	height: 60px;
+	text-align:center;
+	
+}
+header h1{
+	font-family: 'robotolight';
+	width:50%;
+	font-size:34px;
+	color:#fff;
+	float:left;
+	line-height:60px;
+	font-weight:normal;
+
+}
+.desmis{
+	font-family: 'robotolight';
+	font-size:55px;
+	color:#dce646;
+	}
+	
+.barre{
+	color:#dce646;
+	margin-left: 20px;
+}
+/*-----------home1------------*/
+main{
+	width:50%;
+	margin-left:-10%;
+	height:100%;
+	background:blue;
+	transform:skewX(-15deg);
+}
+section{
+	width:100%;
+	height:500px;
+	margin: 0 auto;
+	position:relative;
+	top:50px;
+	background:#000;
+}
+
+section ul{
+	width:100%;
+	font-family: 'robotolight';
+	color:#fff;
+	margin:0 auto;
+	list-style:none;
+	font-size:18px;
+	position:absolute;
+	bottom:30px;
+	right:0;
+	
+}
+section li{
+	background-color:#3c3c3e;
+	width: 28%;
+	display:inline-block;
+	line-height:45px;
+	text-align:center;
+	padding:5px;
+	margin-right:0;
+	
+}
+section img{
+	width:100%;
+	height:auto;
+	margin-left:50px;	
+	position:absolute;
+	top: 0px;
+	left:10px;
+}
+section div{
+	background:#fff;
+	line-height:70px;
+	text-align:center;
+	width:40%;
+	position:absolute;
+	top: 0px;
+	left:400px;
+	transform:skewX(-15deg);
+	
+}
+section div h1{
+	font-family: 'robotolight';
+	font-size:65px;
+	color:#3c3c3e;
+	line-height:65px;
+	font-weight:normal;
+
+}
+#artistique{
+	color:#2b677b;
+	font-family: 'robotobold';
+	font-weight:normal;
+	font-size:75px;
+	position:absolute;
+	top: 50px;
+	left:400px;
+	}
+section h2 {
+	color:#3c3c3e;
+	font-family: 'robotobold';
+	font-weight:normal;
+	font-size:50px;
+	position:absolute;
+	top:200px;
+	left:800px;
+
+}
+section h3 {
+	color:#3c3c3e;
+	font-family: 'robotolight';
+	font-weight:normal;
+	font-size:31px;
+	letter-spacing:12px;
+	position:absolute;
+	top:250px;
+	left:800px;
+
+}
+

@@ -1,0 +1,360 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*--------------------------------MEDIASCREEN700PX-----------------------------------------------------------*/
+@media screen and (max-width: 700px){
+	/*-----------------home-----------------*/
+
+#home header{
+	position:static;
+	background-color:transparent;
+	
+}
+/*------nav--------*/
+#home header nav{
+	width:100%;
+	height: 60px;
+	float:none;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index: 3000;
+	
+}
+#home header nav ul{
+	width:95%;
+	float:none;
+	font-size:18px;
+	position:fixed;
+	top:0;
+	left:12%;
+	
+}
+#home header nav li{
+	min-width: 24%;
+	height:30px;
+	padding:0px;
+}
+
+header h1{
+	width:100%;
+	text-align:center;
+	background-color: none;
+	top:80px;
+	position:absolute;
+}
+#home{
+	margin-top: 60px;
+width: 100%;
+height: 635px;
+background: url(../Images/logo-ed-reduit.svg) no-repeat scroll center 100px, none repeat scroll 0% 0% #2B677B;
+}
+#logoanim{
+	display:none;
+}
+
+#dirbloc {	
+display: none;
+}
+
+#artbloc {	
+	display: none;
+}
+
+
+#graph h2 {
+	display: block;
+	text-align: center;
+	margin: 350px auto auto;
+	max-width: 50%;
+	color: #FFF;
+	font-size: 45px;
+	position:inherit;
+
+}
+#graph h3 {
+	display: block;
+	text-align: center;
+	color: #FFF;
+	margin: -10px auto auto;
+	max-width: 50%;
+	padding-left: 0.37em;
+	font-size: 26px;
+	position:inherit;
+}
+/*---ptbandeau-----*/
+#bandeau{
+	
+	width:100%;
+	height:180px;
+	top: 600px;
+	left:10%;
+	animation: none;
+}
+#bandeau div{
+	text-align:center;
+	width:80%;
+	background-color:transparent;
+	height:45px;
+}
+#bandeau ul{
+	width:80%;
+	font-size:16px;
+	
+}
+#bandeau li{
+	display:inline-block;
+	line-height:35px;
+	text-align:center;
+	padding:0px 10px 0px 10px;
+	
+}
+
+#fleche{
+	position:absolute;
+	bottom:-300px;
+}
+/*------------------------------book--------------------------*/
+#book{
+	height:auto;
+}
+#contligne{
+	width:100%;
+	height:auto;
+	float:none;
+	
+}
+#contligne *{
+	float:none;
+	width:100%;
+	clear:both;
+	display:block;
+}
+#ligne1, #ligne2{
+	height:auto;
+	clear:both;
+	position:relative;
+	display:block;
+	
+}
+#multicanal{
+	width:100%;
+	height:300px;
+	float:left;
+}
+.gauche div{
+	height:300px;
+}
+.gauche h1{
+	font-size:40px;
+	padding:100px 5px 0px 5px;
+	
+}
+#md{width:100%;
+	height:300px;
+}
+
+#md h1{
+	font-size:45px;
+	padding:20px 5px 0px 5px;
+
+}
+#md  h2{
+	font-size:20px;
+
+}
+#md  p{
+	color:#fff;
+	font-family: 'robotolight';
+	font-size:15px;
+	text-align:center;
+}
+#md img{
+	top:-80px;
+}
+.bas{
+	top:220px;
+}
+#md:hover .bas{
+transform:translate(0,-73%);
+}
+/*--email--*/
+#email{
+	width:100%;
+	height:300px;
+}
+.haut h1, .bas2 h1{
+	font-size:40px;
+	padding:100px 5px 0px 5px;
+}
+.haut img{
+	display:none;
+}
+#divers{
+	width:100%;
+	height:300px;
+	
+}
+#divers div{
+	background-color:#8b9194;
+}
+#animations{
+	height:300px;
+	width:100%;
+}
+#logos{
+	width:100%;
+	height:300px;
+}
+
+#btob{
+	display:none;}
+
+.haut3 h1{
+	color:#fff;
+}
+#promos{
+	width:100%;
+	height:300px;
+	float:none;
+	position:relative;
+	display:block;
+	clear:both;
+
+}
+
+
+.droite h1{
+	font-size:40px;
+	padding:100px 5px 0px 5px;
+
+}
+
+
+.droite img{
+	margin-top: 40px;
+	margin-left:30%;
+
+}
+
+#promos:hover .droite{
+transform:translate(100%,0px)
+}
+
+/*-------a propos---------*/
+#apropos{
+	width:100%;
+	height:1200px;
+}
+#contpicto{
+	height:auto;
+
+}
+.picto{
+	margin:auto;
+display: inline-block;
+width: 100%;
+float:none;
+}
+.picto div{
+	width:60px;
+	display:inline-block;
+	height:60px;
+	background-size:85% 85%;
+	margin-bottom:2%;
+}
+.picto div img{
+	width:50%;
+	height:50%;
+	margin-top:22%;
+	margin-bottom:22%;
+	
+}
+.picto div.sspicto{
+width: 65%;
+display: inline-block;
+}
+.picto h1,.picto p {
+	text-align:left;
+}
+/*-------------competences-----------------*/
+.competence{
+	height:33.333%;
+}
+.gris, .bleufoncé, .vert, .bleu {
+	width:50%;
+	height:200px;
+	display:inline-block;
+}
+
+#etoile, #coeur, #supmedia,#idee, #chrono, #mediableu{
+	display:none;
+	}
+	
+.bleufoncé h1, .bleu h1, .vert h1{
+	font-size:28px;
+	padding-top:50px;
+}
+.bleufoncé p, .bleu p, .vert p{
+	font-size:16px;
+	padding: 0 10px 0 10px;
+}
+#mediavert{
+	background:#c8d140;
+}
+#mediavert h1, #mediavert p {
+	color:#3c3c3e;
+}
+/*---------------contact---------------------------------------------------*/
+#contact{
+	margin-top:50px;
+}
+#conteneur{
+	margin:0 10%;
+	width:300px;
+	height:300px;
+	
+}
+#carte{
+	width:300px;
+	height:300px;
+}
+#face img{
+	width:300px;
+	height:300px;
+}
+#face{
+	width:300px;
+	height:300px;
+}
+#dos{
+	
+	width:300px;
+	height:300px;
+}
+#casecontact{
+	width:200px;
+	height:100px;
+}
+#casecontact h2{
+	width:200px;
+	font-size:25px;
+	
+}
+#reseau{
+	display: none;
+	}
+	
+#dos h1{
+	
+	font-size:25px;
+	text-align:center;
+	padding-top:30px;
+}
+#dos p{
+	font-size:20px;
+	text-align:center;
+	padding-bottom:20px;
+}
+}
